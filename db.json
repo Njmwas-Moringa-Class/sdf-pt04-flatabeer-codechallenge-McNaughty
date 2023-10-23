@@ -2,9 +2,10 @@
   "beers": [
     {
       "name": "Oh So Flattening",
-      "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
+      "description": "Whitecap looking - A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
       "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
       "reviews": [
+        "Not too fizzy :)",
         "It's flat! Just the way I like it!!",
         "Is this the real beer, is this just fantasy?",
         "I've always hated bubbles going up my nose, so this is absolutely delightful.",
@@ -63,7 +64,7 @@
     {
       "id": 7,
       "name": "Bramling X",
-      "description": "blue color",
+      "description": "Blue paper and black bottle",
       "image_url": "https://images.punkapi.com/v2/10.png",
       "reviews": [
         "Like a river of joy"
@@ -92,9 +93,10 @@
     {
       "id": 10,
       "name": "Movember",
-      "description": "A deliciously robust, black malted beer with a decadent dark, dry cocoa flavour that provides an enticing backdrop to the Cascade hops.",
+      "description": "Texas - A deliciously robust, black malted beer with a decadent dark, dry cocoa flavour that provides an enticing backdrop to the Cascade hops.",
       "image_url": "https://images.punkapi.com/v2/13.png",
       "reviews": [
+        "For the horse lovers",
         "Like autumn leaves readying themselves for the winter sun",
         "Beep beep, you're having a beer"
       ]

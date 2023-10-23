@@ -65,38 +65,74 @@ function updateList(data) {
         document.getElementById("review-list").innerHTML +=
           "<li>" + reviews + "</li>";
       });
-    };
 
-    // Update Description using the selected beer data
+      // Update Description using the selected beer data
 
-    document
-      .getElementById("description-form")
-      .addEventListener("submit", (e) => {
+      document
+        .getElementById("description-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const newDescription = document.querySelector("#description").value;
+          const sbInfo = window.selectedBeer;
+          if (
+            newDescription == null ||
+            Object.keys(newDescription).length == 0
+          ) {
+            window.alert("No beer update recorded");
+            window.stop();
+          } else {
+            // create new json object with the beer data to be pushed
+            let jsonData = { ...sbInfo };
+
+            jsonData.description = newDescription;
+            //console.log(jsonData);
+
+            fetch(`http://localhost:3000/beers/${jsonData.id}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(jsonData),
+            })
+              .then((response) => response.json())
+              .then((newDesc) => console.log("newdesc update", newDesc))
+              .catch((err) => console.log(err));
+          }
+        });
+
+      // Add review for the beer item
+
+      document.getElementById("review-form").addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const newDescription = document.querySelector("#description").value;
-        const sB = window.selectedBeer;
-        if (sB == null || Object.keys(sB).length == 0) {
-          window.alert("Select beer to update");
+        const itemReview = document.querySelector("#review").value;
+        const itemToReview = window.selectedBeer;
+        if (itemReview == null || Object.keys(itemReview).length == 0) {
+          alert("No review to add to the item");
+          window.stop();
+        } else {
+          // create new json object with the beer data to be pushed
+          let jsonRData = { ...itemToReview };
+
+          originalReviews = jsonRData.reviews;
+          jsonRData.reviews = [itemReview, ...originalReviews];
+          //console.log(jsonData);
+
+          fetch(`http://localhost:3000/beers/${jsonRData.id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(jsonRData),
+          })
+            .then((response) => response.json())
+            .then((newRev) => console.log("newreview update", newRev))
+            .catch((err) => console.log(err));
         }
-
-        // create new json object with the beer data to be pushed
-        let jsonData = { ...sB };
-
-        jsonData.description = newDescription;
-        //console.log(jsonData);
-
-        fetch(`http://localhost:3000/beers/${jsonData.id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(jsonData),
-        })
-          .then((response) => response.json())
-          .then((newDesc) => console.log("newdesc update", newDesc))
-          .catch((err) => console.log(err));
       });
+    };
+
   });
 }
 
