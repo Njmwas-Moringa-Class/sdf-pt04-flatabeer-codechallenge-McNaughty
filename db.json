@@ -1,7 +1,6 @@
 {
   "beers": [
     {
-      "id": 1,
       "name": "Oh So Flattening",
       "description": "A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.",
       "image_url": "https://i.ibb.co/wQ4G0w1/flatiron-brew.png",
@@ -10,7 +9,8 @@
         "Is this the real beer, is this just fantasy?",
         "I've always hated bubbles going up my nose, so this is absolutely delightful.",
         "Flat straight out of the bottle! No more waiting for the fizziness to subside. Thank you FlattaBeer!! I love you!!!"
-      ]
+      ],
+      "id": 1
     },
     {
       "id": 2,
@@ -34,7 +34,7 @@
     {
       "id": 4,
       "name": "Electric India",
-      "description": "Tastes like memories",
+      "description": "Tastes like memories but Looks like dark ones",
       "image_url": "https://images.punkapi.com/v2/6.png",
       "reviews": [
         "I remember nothing"
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "name": "Bramling X",
-      "description": "Good old Bramling Cross is elegant, refined, assured, (boring) and understated. Understated that is unless you hop the living daylights out of a beer with it. This is Bramling Cross re-invented and re-imagined, and shows just what can be done with English hops if you use enough of them. Poor Bramling Cross normally gets lost in a woeful stream of conformist brown ales made by sleepy cask ale brewers. But not anymore. This beer shows that British hops do have some soul, and is a fruity riot of blackberries, pears, and plums. Reminds me of the bramble, apple and ginger jam my grandmother used to make.",
+      "description": "blue color",
       "image_url": "https://images.punkapi.com/v2/10.png",
       "reviews": [
         "Like a river of joy"
@@ -72,7 +72,7 @@
     {
       "id": 8,
       "name": "Misspent Youth",
-      "description": "The brainchild of our small batch brewer, George Woods. A dangerously drinkable milk sugar- infused Scotch Ale.",
+      "description": "Craft beer for the people - keg only",
       "image_url": "https://images.punkapi.com/v2/keg.png",
       "reviews": [
         "Woe is me, how I long for the days of yore",
